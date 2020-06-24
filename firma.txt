@@ -1,0 +1,6 @@
+oooCheremyski 100000 150000
+oooCheremyskins 100000 150000
+oooCheremysdins 100000 150000
+oooCheremyfan 100000 15000
+oooCheremypropan 100000 15000
+oooCheremyadblock 100000 15000
