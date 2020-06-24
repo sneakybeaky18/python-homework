@@ -16,16 +16,22 @@ import json
 
 file = open("firma.txt", "r", encoding="utf-8")
 readed = file.readlines()
+countfirm = len(readed)
 
+avgprof=[]
 list = []
 for el in readed:
     name, revenue, spends = el.split()
     int1 = int(revenue)
     int2 = int(spends)
     profit = int1-int2
-    if profit > 0:
-        list.append(name)
-        list.append(profit)
+    list.append(name)
+    list.append(profit)
+    avg = profit/countfirm
+
+list.append(f"Medium revenue: {avg}")
+
+print(list)
 
 dictOfWords = dict.fromkeys(list, ":")
 
