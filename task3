@@ -1,0 +1,39 @@
+# 3. Создать текстовый файл (не программно), построчно записать
+# фамилии сотрудников и величину их окладов. Определить,
+# кто из сотрудников имеет оклад менее 20 тыс.,
+# вывести фамилии этих сотрудников. Выполнить подсчет средней
+# величины дохода сотрудников.
+
+f1 = open('stuffpayments.txt', 'r', encoding='utf-8')
+f2 = f1.readlines()
+
+replaced_to_list = []
+for el in f2:
+    replaced = el.replace(",",".")
+    replaced_to_list.append(replaced)
+
+def less20k():
+    less20k = []
+    for line in replaced_to_list:
+        name,value = line.split()
+        floatconverted = float(value)
+        if floatconverted < 20000:
+            actual_list = value, name
+            less20k.append(actual_list)
+    return(less20k)
+
+
+def medium_payements():
+    revenue = []
+    for line in replaced_to_list:
+        name, value = line.split()
+        floatconverted_2 = float(value)
+        number_of_stuff = len(value)
+        revenue.append(floatconverted_2)
+
+    revenue_sum = sum(revenue)
+    stuff_medium_payments = revenue_sum/number_of_stuff
+    return(stuff_medium_payments)
+
+print(medium_payements())
+print(less20k())

@@ -1,0 +1,31 @@
+# 5. Создать (программно) текстовый файл, записать
+# в него программно набор чисел, разделенных пробелами.
+# Программа должна подсчитывать сумму чисел в файле и
+# выводить ее на экран.
+
+# a = open("numberssum.txt", "r")
+# data = a.read()
+# a.close()
+
+#Проверка на работу уже с созданным файлом и помещёнными данными
+
+dataAB = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,./:;<=>?@[\]^_`{|}~"
+data = input("Введите числа через пробел")
+
+with open("numberssum.txt", "w") as f:
+    d = f.write(data)
+
+# Создание файла программно, как требует задача
+
+for el in data:
+    if el in dataAB:
+        print("В списке могут быть только числа")
+        break
+    else:
+        splited = data.split()
+        ints = []
+        for el in splited:
+            x = int(el)
+            ints.append(x)
+            final = sum(ints)
+print(final)
