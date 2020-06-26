@@ -1,0 +1,32 @@
+# 5. Реализуйте базовый класс Car. У данного класса должны быть следующие атрибуты:
+# speed, color, name, is_police (булево). А также методы: go, stop, turn(direction),
+# которые должны сообщать, что машина поехала, остановилась, повернула (куда).
+# Опишите несколько дочерних классов: TownCar, SportCar, WorkCar, PoliceCar.
+# Добавьте в базовый класс метод show_speed, который должен показывать текущую скорость автомобиля.
+# Для классов TownCar и WorkCar переопределите метод show_speed.
+# При значении скорости свыше 60 (TownCar) и 40 (WorkCar) должно выводиться
+# сообщение о превышении скорости.
+
+class Stationery:
+    def __init__(self, t, d):
+        self.title = t
+        self.draw = d
+        print("Запуск отрисовки")
+
+class Pen(Stationery):
+    def Pen(self):
+        print("Ручкой \n")
+q = Pen("Title","Draw")
+q.Pen()
+
+class Pencil(Stationery):
+    def Pencil(self):
+        print("Карандашом \n")
+g = Pencil("Привет","Пока")
+g.Pencil()
+
+class Handle(Stationery):
+    def Handle(self):
+        print("Кистью \n")
+f = Handle("Привет","Пока")
+f.Handle()
