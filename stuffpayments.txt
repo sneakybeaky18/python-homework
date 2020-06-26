@@ -1,7 +1,0 @@
-Stepanov 18000,12
-Antonov 13000,72
-Serduk 33000,62
-Ivanenko 81000,32
-Frolov 33000,31
-Ivanov 11000,32
-Germanov 8000,82
