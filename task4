@@ -1,0 +1,96 @@
+# 5. Реализуйте базовый класс Car. У данного класса должны быть следующие атрибуты:
+# speed, color, name, is_police (булево). А также методы: go, stop, turn(direction),
+# которые должны сообщать, что машина поехала, остановилась, повернула (куда).
+# Опишите несколько дочерних классов: TownCar, SportCar, WorkCar, PoliceCar.
+# Добавьте в базовый класс метод show_speed, который должен показывать текущую скорость автомобиля.
+# Для классов TownCar и WorkCar переопределите метод show_speed.
+# При значении скорости свыше 60 (TownCar) и 40 (WorkCar) должно выводиться
+# сообщение о превышении скорости.
+
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+        print(name, color)
+
+    def go(self):
+        print("Машина поехала")
+    def stop(self):
+        print("Машина остановилась")
+    def turn_left(self):
+        print("Машина повернула налево")
+    def turn_right(self):
+        print("Машина повернула направо")
+
+    def show_speed(self):
+        print(r.speed)
+
+class TownCar(Car):
+    def go(self):
+        print("Машина поехала")
+    def stop(self):
+        print("Машина остановилась")
+    def turn_left(self):
+        print("Машина повернула налево")
+    def turn_right(self):
+        print("Машина повернула направо")
+    def show_speed(self):
+        if s.speed > 60:
+            print("Вы превышаете")
+        print(f"Ваша скорость: {s.speed} kmh")
+
+s = TownCar(82, "Gray", "LADA", False)
+s.show_speed()
+
+class WorkCar(Car):
+    def go(self):
+        print("Машина поехала")
+    def stop(self):
+        print("Машина остановилась")
+    def turn_left(self):
+        print("Машина повернула налево")
+    def turn_right(self):
+        print("Машина повернула направо")
+    def show_speed(self):
+        if f.speed > 40:
+            print("Вы превышаете")
+        print(f"Ваша скорость: {f.speed} kmh")
+
+f = WorkCar(42, "Black", "Volvo", False)
+f.show_speed()
+
+class PoliceCar(Car):
+    def go(self):
+        print("Машина поехала")
+    def stop(self):
+        print("Машина остановилась")
+    def turn_left(self):
+        print("Машина повернула налево")
+    def turn_right(self):
+        print("Машина повернула направо")
+    def show_speed(self):
+        if z.speed > 250:
+            print("Вы достигли предела скорости")
+        print(f"Ваша скорость: {z.speed} kmh")
+
+z = PoliceCar(251, "White", "Skoda", True)
+z.show_speed()
+
+class SportCar(Car):
+    def go(self):
+        print("Машина поехала")
+    def stop(self):
+        print("Машина остановилась")
+    def turn_left(self):
+        print("Машина повернула налево")
+    def turn_right(self):
+        print("Машина повернула направо")
+    def show_speed(self):
+        if t.speed > 270:
+            print("Риск не вернуться домой значительно повысился, сбавьте скорость")
+        print(f"Ваша скорость: {t.speed} kmh")
+
+t = SportCar(321, "Gray", "BMW M5", False)
+t.show_speed()

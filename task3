@@ -1,0 +1,43 @@
+# 3. Реализовать базовый класс Worker (работник), в котором определить атрибуты:
+# name, surname, position (должность), income (доход). Последний атрибут должен
+# быть защищенным и ссылаться на словарь, содержащий элементы: оклад и премия,
+# например, {"wage": wage, "bonus": bonus}. Создать класс Position (должность)
+# на базе класса Worker. В классе Position реализовать методы получения полного
+# имени сотрудника (get_full_name) и дохода с учетом премии (get_total_income).
+# Проверить работу примера на реальных данных (создать экземпляры класса Position,
+# передать данные, проверить значения атрибутов, вызвать методы экземпляров).
+
+dict = {"30934": "wage", "12000": "bonus"}
+total = []
+for el in dict:
+    total.append(int(el))
+countIndex = sum(total)
+# print(countIndex)
+
+class Worker:
+    def __init__(self, name, surname, position, _income):
+        # print(name,surname,position,_income)
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = countIndex
+
+class Position(Worker):
+    def get_full_name(self):
+        print(f"Имя сотрудника: {r.name}, Фамилия сотрудника: {r.surname}")
+    def get_total_income(self):
+        print(f"Общий доход сотрудника: {countIndex}")
+
+r = Position("Sergey","Petrov", "Manager", countIndex)
+r.get_full_name()
+r.get_total_income()
+
+class Position(Worker):
+    def get_full_name(self):
+        print(f"Имя сотрудника: {r2.name}, Фамилия сотрудника: {r2.surname}")
+    def get_total_income(self):
+        print(f"Общий доход сотрудника: {countIndex}")
+
+r2 = Position("Anton","Petrov", "Manager", countIndex)
+r2.get_full_name()
+r2.get_total_income()
