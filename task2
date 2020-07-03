@@ -1,0 +1,18 @@
+class Cloth():
+    def __init__(self, v, h):
+        self.v = v
+        self.h = h
+
+    @property
+    def palto(self):
+        z = (self.v/6.5)+0.5
+        return z
+
+    @property
+    def kostum(self):
+        z = (2*self.h)+0.3
+        return z
+
+c = Cloth(13,37)
+print(f"Расчёт ткани по костюму равен: {c.kostum}, а по пальто: {c.palto}. "
+      f"Общий расход ткани равен: {c.kostum + c.palto}")

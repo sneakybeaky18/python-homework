@@ -1,1 +1,21 @@
-1
+class Matrix:
+    def __init__(self, matrix):
+        self.matrix = matrix
+
+    def __add__(self, other):
+        return Matrix([[self.matrix[i][j] + other.matrix[i][j]
+                        for j in range(len(self.matrix[i]))]
+                       for i in range(len(self.matrix))])
+
+    def __str__(self):
+        return 'Matrix:\n' + '\n'.join('\t'.join(map(str, i)) for i in self.matrix)
+
+
+a1 = Matrix([[90, 2, 3],
+             [5, 6, 7]])
+a2 = Matrix([[1, 2, 3],
+             [5, 6, 7]])
+a3 = a1 + a2
+
+print(a3)
+print(a1 + a2)
